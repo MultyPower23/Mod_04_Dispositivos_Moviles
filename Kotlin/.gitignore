@@ -1,0 +1,13 @@
+# Android Studio y Gradle regeneran todo esto al abrir el proyecto.
+.idea/
+*.iml
+.gradle/
+build/
+captures/
+.cxx/
+.externalNativeBuild/
+
+# Ruta del SDK de cada computador.
+local.properties
+
+.DS_Store
