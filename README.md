@@ -1,11 +1,11 @@
-# Kotlin — Dispositivos Móviles
+# Mod_04_Dispositivos_Moviles
 
-Proyectos de Android Studio y resúmenes de clase del Módulo 4 (Dispositivos Móviles). Este repo entra al repo [`Tecnica`](https://github.com/MultyPower23/Tecnica) como submódulo en `Mod_04_Dispositivos_Moviles/Kotlin`.
+Proyectos de Android Studio y resúmenes de clase del Módulo 4 (Programación para Dispositivos Móviles). Este repo entra al repo [`Tecnica`](https://github.com/MultyPower23/Tecnica) como submódulo en `Mod_04_Dispositivos_Moviles`.
 
 ## 📂 Estructura
 
 ```txt
-Kotlin/
+Mod_04_Dispositivos_Moviles/
 ├── Clase_27/
 │   └── Clase_27.md
 ├── Clase_28/
@@ -44,5 +44,5 @@ git clone --recurse-submodules https://github.com/MultyPower23/Tecnica.git
 Solo este repo:
 
 ```bash
-git clone https://github.com/MultyPower23/Kotlin.git
+git clone https://github.com/MultyPower23/Mod_04_Dispositivos_Moviles.git
 ```
