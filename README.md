@@ -31,7 +31,7 @@ Cada `Clase_N/` lleva su resumen `Clase_N.md` y, si la clase dejó código, los 
 
 ## ▶️ Cómo abrir un proyecto
 
-En Android Studio: `File → Open` y elegir la carpeta del proyecto (la que contiene `settings.gradle`, por ejemplo `Clase_29/Juann_Ciro`), no la raíz del repo. Gradle descarga las dependencias en la primera sincronización y Android Studio crea por su cuenta `local.properties` y `.idea/`, que no se versionan.
+En Android Studio: `File → Open` y elegir la carpeta del proyecto (la que contiene `settings.gradle`, por ejemplo `Kotlin/Clase_29/Juann_Ciro`), no la raíz del repo. Gradle descarga las dependencias en la primera sincronización y Android Studio crea por su cuenta `local.properties` y `.idea/`, que no se versionan.
 
 ## 📥 Cómo clonar
 
