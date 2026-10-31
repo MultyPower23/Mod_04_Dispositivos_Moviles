@@ -81,8 +81,60 @@
                 android:layout_marginTop="15dp"
                 app:passwordToggleEnabled="true">
 
+                <EditText
+                    android:id="@+id/etClave"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/clave"
+                    android:inputType="textPassword"
+                    />
 
             </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tvOlvidaste"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Clave"
+                android:text="@string/olvidaste_contraseña"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="15dp"
+                />
+
+            <Button
+                android:id="@+id/btnIngresar"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/tvOlvidaste"
+                android:layout_marginTop="15dp"
+                android:text="@string/ingresar"
+                android:backgroundTint="@color/verde_esmeralda"
+                />
+
+            <Button
+                android:id="@+id/btnWeb"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/btnIngresar"
+                android:layout_marginTop="10dp"
+                android:text="@string/web"
+                android:backgroundTint="@color/azul_cielo"
+                />
+
+            <TextView
+                android:id="@+id/tvRegistrate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no_cuenta"
+                android:layout_below="@+id/btnWeb"
+                android:layout_marginTop="30dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="25sp"
+                android:layout_centerHorizontal="true"
+                />
 
         </RelativeLayout>
 

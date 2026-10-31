@@ -3,4 +3,7 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="verde_esmeralda">#17916C</color>
+    <color name="azul_cielo">#66BDBD</color>
 </resources>
