@@ -1,14 +1,21 @@
 # Android Studio — Clase 28
 
-> ⚠️ Resumen armado con las anotaciones propias de la clase y con el código de los proyectos `Prueba1` y `Proyecto_Prueba`. Faltan los apuntes de un compañero para completar el detalle. Lo que se vio en esta clase y en la Clase_29 se separó según lo que muestra cada proyecto, no según un registro exacto de cada sesión. El punto «id» de las anotaciones se interpretó como el identificador de los elementos del layout.
+> ⚠️ Resumen armado con las anotaciones propias de la clase, apuntes de un compañero y el código de los proyectos `Prueba1` y `Proyecto_Prueba`. Lo visto en esta clase y en la Clase_29 se separó según lo que muestra cada proyecto, no según un registro exacto de cada sesión. El punto «id» de las anotaciones se interpretó como el identificador de los elementos del layout.
 
 ## 📚 Tema central
 
-Primer contacto con Android Studio: qué es un IDE, cómo se organiza un proyecto Android, cómo se prueba en el emulador y las primeras pantallas con imágenes.
+Primer contacto con Android Studio: qué es un IDE, sus ventajas y desventajas, cómo se organiza un proyecto Android, cómo se prueba en el emulador y las primeras pantallas con imágenes.
 
 ## 🧠 Qué se vio
 
-**IDE e id.** Un IDE (entorno de desarrollo integrado) junta en un solo programa el editor, el compilador, el emulador y las herramientas para depurar. Android Studio es el IDE para hacer apps Android. El `id` es el nombre que se le pone a cada elemento de un layout (`@+id/button`, `@+id/main`) para poder encontrarlo desde el código con `findViewById(R.id.main)`.
+**IDE e id.** Un IDE (entorno de desarrollo integrado) junta en un solo programa el editor, el compilador, el emulador y las herramientas para depurar. Android Studio es el IDE para hacer apps Android y es compatible con Java, C y C++. El `id` es el nombre que se le pone a cada elemento de un layout (`@+id/button`, `@+id/main`) para poder encontrarlo desde el código con `findViewById(R.id.main)`.
+
+- Ventajas: codificación más rápida, pensado para trabajo colaborativo, soporte nativo de Android y plantillas de proyecto ya armadas.
+- Desventajas: pide bastante hardware y la instalación es lenta.
+
+Existen dos ediciones de Android Studio: la morada, con todas las funciones, y la azul, más compacta y con solo lo esencial.
+
+**JDK y SDK.** El JDK (Java Development Kit) trae la máquina virtual de Java que usa Android Studio por debajo (versión 25.0.1 en la que se instaló en clase). El SDK (Software Development Kit) es el paquete de herramientas y librerías específicas de Android para compilar y probar las apps.
 
 **Paquetes de archivos.** Un proyecto Android trae muchas carpetas, pero casi todo pasa en `app/src/main/`:
 
@@ -21,16 +28,18 @@ Primer contacto con Android Studio: qué es un IDE, cómo se organiza un proyect
 **Archivos de configuración.** Son los que le dicen a Android y a Gradle cómo armar la app:
 
 - `AndroidManifest.xml`: declara las pantallas (Activities), el tema, el ícono y el nombre de la app. La Activity con el `intent-filter` `MAIN` + `LAUNCHER` es la que se abre al tocar el ícono.
-- `app/build.gradle`: `namespace`, `compileSdk` y `targetSdk` 36, `minSdk` 28 y las dependencias.
+- `app/build.gradle`: `namespace`, `compileSdk` y `targetSdk` 36, `minSdk` 28 y las dependencias (bloque `dependencies`, con cada librería como `implementation libs.nombre`).
 - `build.gradle` (raíz) y `settings.gradle`: plugins y módulos del proyecto.
 - `gradle/libs.versions.toml`: catálogo con las versiones de las librerías, que luego se usan como `libs.appcompat`, `libs.lottie`, etc.
 - `gradle.properties` y `gradle/wrapper/gradle-wrapper.properties`: opciones de Gradle y la versión que descarga el proyecto (8.13).
 
-**Partes del entorno.** `Prueba1` se armó arrastrando elementos desde la paleta hasta el editor de diseño: las coordenadas `tools:layout_editor_absoluteX/Y` y la imagen por defecto de estrella son el rastro de ese arrastre. El detalle del resto de paneles y barras queda por completar con los apuntes del compañero.
+**Partes del entorno.** `Prueba1` se armó arrastrando elementos desde la paleta hasta el editor de diseño: las coordenadas `tools:layout_editor_absoluteX/Y` y la imagen por defecto de estrella son el rastro de ese arrastre.
+
+**Generar el APK.** Desde el menú de las tres rayas (☰) se llega a Build → generar APK. El APK es el archivo instalable que se comparte o se sube a un dispositivo; queda guardado en `app/build/outputs/apk/`.
 
 **Emulador Android Pixel 9.** Las apps se prueban en un dispositivo virtual Pixel 9 que se crea desde el Device Manager, sin necesidad de un celular físico.
 
-**Librería Lottie.** Se agregó la librería de animaciones de Airbnb (`com.airbnb.android:lottie`) declarándola en `libs.versions.toml` y llamándola desde `app/build.gradle` con `implementation libs.lottie`. En `Proyecto_Prueba` quedó la versión 3.1.0. En las anotaciones aparece 3.0.1, así que conviene confirmar cuál fue la que se escribió en clase.
+**Librería Lottie.** Se agregó la librería de animaciones de Airbnb (`com.airbnb.android:lottie`) declarándola en `libs.versions.toml` y llamándola desde `app/build.gradle` con `implementation libs.lottie`. `Proyecto_Prueba` quedó en la versión 6.7.1, la misma con la que se sigue trabajando en la Clase_29.
 
 **Imágenes.** Las imágenes descargadas se guardan en `res/drawable/` y se usan desde el layout con `@drawable/nombre`.
 
@@ -47,9 +56,11 @@ Primer contacto con Android Studio: qué es un IDE, cómo se organiza un proyect
 
 ## ✅ Ideas clave
 
-- 🧰 Android Studio es el IDE: editor, emulador y compilación en un mismo lugar.
+- 🧰 Android Studio es el IDE: editor, emulador y compilación en un mismo lugar, con una edición completa (morada) y una compacta (azul).
+- ⚙️ El JDK trae la máquina virtual de Java; el SDK trae las herramientas específicas de Android.
 - 🏷️ El `id` de cada elemento del layout es lo que permite encontrarlo desde el código.
 - 📂 El código va en `java/`, lo visual en `res/` y la configuración en el Manifest y los `.gradle`.
 - 📱 El emulador Pixel 9 permite probar sin celular físico.
 - 📦 Las librerías se declaran en `libs.versions.toml` y se usan en `app/build.gradle`.
 - 🖼️ Las imágenes viven en `drawable/` y se llaman con `@drawable/`.
+- 📤 El menú de las tres rayas genera el APK, el instalable que se comparte.

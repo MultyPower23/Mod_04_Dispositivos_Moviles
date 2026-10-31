@@ -1,6 +1,6 @@
 # Kotlin — Clase 30
 
-> ⚠️ No se tomaron notas de esta clase. Este resumen se armó solo con el código del proyecto `Dispositivos`, así que puede faltar lo que se explicó en vivo y no quedó en el código. Conviene completarlo con los apuntes de un compañero.
+> ⚠️ No se tomaron notas propias de esta clase. Este resumen se armó con el código del proyecto `Dispositivos` y los apuntes de un compañero, así que puede faltar lo que se explicó en vivo y no quedó en ninguno de los dos.
 
 ## 📚 Tema central
 
@@ -28,11 +28,13 @@ Primer proyecto en Kotlin con Jetpack Compose: la pantalla se escribe como códi
 
 `val` hace que el valor no se pueda cambiar después de crear el objeto, y el `?` en `String?` permite que el campo sea `null` cuando el dato no existe.
 
-**Estructura de los datos.** Al final de `Dispositivos.kt` hay un JSON comentado con 13 dispositivos (`id`, `name` y `data`), que es la forma de datos que las clases intentan representar.
+**Estructura de los datos.** Al final de `Dispositivos.kt` hay un JSON comentado con 13 dispositivos (`id`, `name` y `data`), que es la forma de datos que las clases intentan representar. El JSON sale de `restful-api.dev`, una API REST pública gratuita pensada para pruebas y aprendizaje.
+
+**Elemento de lista.** `Elementos.kt` define `DeviceView`, un `@Composable` que arma una fila por dispositivo: un ícono de teléfono, el nombre y el color (con `Column` y `Row`), y una línea divisoria (`HorizontalDivider`) al final. Si el dispositivo no tiene color, muestra un `"-"` en su lugar.
 
 ## 💻 Ejercicios trabajados
 
-**`Dispositivos`**: el proyecto con las dos clases de datos, el JSON de referencia y una pantalla que por ahora solo muestra el texto «Comprar». Todavía no se lee el JSON ni se muestra una lista de dispositivos.
+**`Dispositivos`**: el proyecto con las dos clases de datos, el JSON de referencia (tomado de `restful-api.dev`), la fila `DeviceView` para mostrar un dispositivo, y una pantalla que por ahora solo muestra el texto «Comprar». Todavía no se lee el JSON ni se arma la lista completa de dispositivos con `DeviceView`.
 
 ## ⚠️ Errores comunes / cosas a las que prestar atención
 
@@ -48,4 +50,5 @@ Primer proyecto en Kotlin con Jetpack Compose: la pantalla se escribe como códi
 - 👀 `@Preview` permite ver una función composable sin correr la app.
 - 📦 Una `data class` guarda datos sin código repetido.
 - ❓ `String?` admite `null`; `String` no.
-- 🧾 El JSON de referencia muestra cómo son los datos que luego se van a usar.
+- 🧾 El JSON de referencia sale de `restful-api.dev` y muestra cómo son los datos que luego se van a usar.
+- 📱 `DeviceView` en `Elementos.kt` ya arma la fila visual de un dispositivo, aunque todavía no se conecta con la lista completa.

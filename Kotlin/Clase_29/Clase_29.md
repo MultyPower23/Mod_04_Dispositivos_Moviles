@@ -1,6 +1,6 @@
 # Android Studio — Clase 29
 
-> ⚠️ No se asistió a esta clase. Este resumen se armó con las anotaciones de las dos clases y con el código del proyecto `Juann_Ciro`, así que puede faltar lo que se explicó o se hizo en vivo y no quedó en el código. Faltan los apuntes de un compañero para completarlo. Lo que se vio en esta clase y en la Clase_28 se separó según lo que muestra cada proyecto, no según un registro exacto de cada sesión.
+> ⚠️ No se asistió a esta clase. Este resumen se armó con las anotaciones de las dos clases, los apuntes de un compañero y el código del proyecto `Juann_Ciro`, así que puede faltar lo que se explicó o se hizo en vivo y no quedó en ningún registro. Lo que se vio en esta clase y en la Clase_28 se separó según lo que muestra cada proyecto, no según un registro exacto de cada sesión.
 
 ## 📚 Tema central
 
@@ -8,7 +8,7 @@ Pantalla de precarga (splash) con animación Lottie, imágenes y textos guardado
 
 ## 🧠 Qué se vio
 
-**Animación con Lottie.** La librería se declara en `gradle/libs.versions.toml` con la versión 6.7.1 y se usa en `app/build.gradle` con `implementation libs.lottie`. La animación es un archivo JSON que se guarda en la carpeta `assets/`, y en el layout se muestra con un `LottieAnimationView`:
+**Animación con Lottie.** En esta clase la librería pasó de la versión 3.0.1 (con la que se venía trabajando) a la 6.7.1, que es la que queda declarada en `gradle/libs.versions.toml` y se usa en `app/build.gradle` con `implementation libs.lottie`. Las animaciones se descargan en formato JSON desde LottieFiles (lottiefiles.com). La animación es un archivo JSON que se guarda en la carpeta `assets/`, y en el layout se muestra con un `LottieAnimationView`:
 
 - `lottie_fileName`: el nombre del JSON dentro de `assets/`.
 - `lottie_autoPlay`: arranca sola al abrir la pantalla.
@@ -50,8 +50,8 @@ Tener los textos en un solo archivo permite cambiarlos sin tocar los layouts y d
 
 ## ✅ Ideas clave
 
-- 🎞️ Lottie reproduce animaciones guardadas como JSON en `assets/`.
-- 🔢 La versión de la librería se cambia en un solo lugar: `libs.versions.toml`.
+- 🎞️ Lottie reproduce animaciones guardadas como JSON en `assets/`, descargadas de LottieFiles.
+- 🔢 La versión de la librería se cambia en un solo lugar: `libs.versions.toml` — en esta clase pasó de 3.0.1 a 6.7.1.
 - 🖼️ Las imágenes van en `drawable/` y se llaman con `@drawable/`.
 - 🔤 Los textos van en `strings.xml` y se llaman con `@string/`.
 - 🚀 Solo la Activity con `MAIN` + `LAUNCHER` debe abrirse al tocar el ícono.
