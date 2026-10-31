@@ -8,13 +8,13 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    android:background="@drawable/fondo"
+    android:background="@drawable/fondo_carga"
     tools:context=".Precarga">
 
     <ImageView
         android:layout_width="200dp"
         android:layout_height="200dp"
-        android:src="@drawable/cohete_logo"
+        android:src="@drawable/sello_shairo"
         />
 
     <com.airbnb.lottie.LottieAnimationView
