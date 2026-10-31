@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- El manifiesto le describe la app a Android: nombre, icono, tema y pantallas que existen. -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- Configuración general de la app; los valores con @ vienen de la carpeta res/. -->
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -11,6 +13,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Juann_Ciro">
+        <!-- MAIN y LAUNCHER hacen que Precarga sea la primera pantalla al tocar el icono. -->
         <activity
             android:name=".Precarga"
             android:exported="true">
@@ -20,6 +23,7 @@
             </intent-filter>
         </activity>
 
+        <!-- Con este segundo intent-filter LAUNCHER, el celular muestra dos iconos de la app. -->
         <activity
             android:name=".MainActivity"
             android:exported="true">

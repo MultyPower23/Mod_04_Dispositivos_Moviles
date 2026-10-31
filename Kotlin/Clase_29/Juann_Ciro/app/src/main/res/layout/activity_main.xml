@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- RelativeLayout ubica cada vista respecto al padre o a otra vista por su id. -->
+<!-- background pone una imagen de fondo que cubre toda la pantalla. -->
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -9,6 +11,8 @@
     android:background="@drawable/fondo_principal"
     tools:context=".MainActivity">
 
+    <!-- centerHorizontal centra la vista en horizontal dentro del padre. -->
+    <!-- contentDescription es el texto que leen los lectores de pantalla para describir la imagen. -->
     <ImageView
         android:id="@+id/ivLogo"
         android:layout_width="144dp"
@@ -19,6 +23,7 @@
         android:src="@drawable/sello_shairo"
         />
 
+    <!-- layout_below coloca el título debajo de la vista con id ivLogo. -->
     <TextView
         android:id="@+id/tvTitulo"
         android:layout_width="wrap_content"
@@ -32,6 +37,8 @@
         android:layout_marginTop="60dp"
         />
 
+    <!-- ScrollView permite desplazar el contenido si no cabe en la pantalla, por ejemplo con el teclado abierto. -->
+    <!-- Solo admite un hijo directo, por eso el formulario va dentro de un RelativeLayout. -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -44,6 +51,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+            <!-- TextInputLayout es un contenedor de Material que envuelve un campo de texto. -->
+            <!-- Hace que el hint suba como etiqueta flotante cuando el usuario empieza a escribir. -->
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/Usuario"
                 android:layout_width="match_parent"
@@ -51,10 +60,32 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="50dp">
 
+                <!-- EditText es el campo donde se escribe; hint es el texto guía que se ve cuando está vacío. -->
+                <!-- inputType="textEmailAddress" abre el teclado con @ y punto a la mano. -->
+                <EditText
+                    android:id="@+id/etUsuario"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:hint="@string/usuario"
+                    android:inputType="textEmailAddress"/>
 
             </com.google.android.material.textfield.TextInputLayout>
-        </RelativeLayout>
-    </ScrollView>
 
+            <!-- passwordToggleEnabled agrega el icono de ojo para mostrar u ocultar la clave. -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/Clave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Usuario"
+                android:layout_marginTop="15dp"
+                app:passwordToggleEnabled="true">
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
 
 </RelativeLayout>

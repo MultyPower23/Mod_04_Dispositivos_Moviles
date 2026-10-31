@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <!-- Tema XML mínimo para la Activity; los colores reales de la interfaz los define el tema de Compose. -->
     <style name="Theme.Dispositivos" parent="android:Theme.Material.Light.NoActionBar" />
 </resources>

@@ -1,3 +1,4 @@
+<!-- Textos de la app; se usan con @string/nombre en XML o R.string.nombre en código. -->
 <resources>
     <string name="app_name">Proyecto_Prueba</string>
 </resources>

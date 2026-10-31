@@ -2,6 +2,7 @@ package com.ciro.dispositivos.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
+// Colores en formato 0xAARRGGBB; los de tono 80 son para modo oscuro y los de tono 40 para modo claro.
 val Purple80 = Color(0xFFD0BCFF)
 val PurpleGrey80 = Color(0xFFCCC2DC)
 val Pink80 = Color(0xFFEFB8C8)

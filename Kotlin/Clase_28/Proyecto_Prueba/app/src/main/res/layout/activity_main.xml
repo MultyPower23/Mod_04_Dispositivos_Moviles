@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- ConstraintLayout ubica cada vista con restricciones respecto al padre o a otras vistas. -->
+<!-- xmlns:android son atributos de Android, xmlns:app de librerías y xmlns:tools solo afecta la vista previa del editor. -->
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"

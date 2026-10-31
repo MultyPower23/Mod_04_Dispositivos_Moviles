@@ -1,7 +1,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
+    <!-- values-night se aplica cuando el celular está en modo oscuro y reemplaza al tema de values. -->
     <style name="Base.Theme.Proyecto_Prueba" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your dark theme here. -->
+        <!-- Aquí se sobrescriben colores del modo oscuro. -->
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
     </style>
 </resources>
