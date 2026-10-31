@@ -51,10 +51,29 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="50dp">
 
+                <EditText
+                    android:id="@+id/etUsuario"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:hint="@string/usuario"
+                    android:inputType="textEmailAddress"/>
 
             </com.google.android.material.textfield.TextInputLayout>
-        </RelativeLayout>
-    </ScrollView>
 
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/Clave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Usuario"
+                android:layout_marginTop="15dp"
+                app:passwordToggleEnabled="true">
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
 
 </RelativeLayout>
