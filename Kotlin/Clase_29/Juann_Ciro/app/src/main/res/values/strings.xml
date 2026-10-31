@@ -1,7 +1,27 @@
 <!-- Textos de la app; se usan con @string/nombre en XML o R.string.nombre en código. -->
 <resources>
+    <!---Pantalla de carga -->
     <string name="app_name">Juann_Ciro</string>
     <string name="nombre_app">Juan Esteban Ciro</string>
     <string name="version">Versión 1.0</string>
     <string name="dev">Desarrollado por Ciro</string>
+
+
+    <!---Controles generales-->
+    <string name="nuevo">Nuevo</string>
+    <string name="editar">Editar</string>
+    <string name="actualizar">Actualizar</string>
+    <string name="eliminar">Eliminar</string>
+
+
+    <!---Login-->
+    <string name="login">Login de Acceso</string>
+    <string name="usuario">Usuarios</string>
+    <string name="clave">Clave</string>
+    <string name="olvidaste_contraseña">Olvidaste tu contraseña</string>
+    <string name="ingresar">Ingresar</string>
+    <string name="web">Pagina Web</string>
+    <string name="no_cuenta">Registrarte</string>
+    <string name="sello_personal">Sello personal</string>
+
 </resources>
