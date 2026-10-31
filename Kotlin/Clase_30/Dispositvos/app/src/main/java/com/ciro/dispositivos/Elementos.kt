@@ -15,12 +15,16 @@ import com.ciro.dispositivos.ui.theme.DispositivosTheme
 import com.ciro.dispositivos.ui.theme.Typography
 
 
+// Composable que dibuja una fila con la información de un dispositivo.
+// "modifier: Modifier = Modifier" es un parámetro con valor por defecto; se puede omitir al llamar la función.
 @Composable
 fun DeviceView(device: Dispositivos, modifier: Modifier = Modifier) {
+    // Column apila sus hijos en vertical y Row los pone en horizontal.
     Column(modifier = modifier) {
         Row(
             verticalAlignment = Alignment.CenterVertically
         ) {
+            // contentDescription describe el icono para lectores de pantalla; null indica que es decorativo.
             Icon(
                 imageVector = Icons.Default.Phone,
                 contentDescription = null
@@ -30,16 +34,19 @@ fun DeviceView(device: Dispositivos, modifier: Modifier = Modifier) {
                     text = device.name,
                     style = Typography.headlineMedium
                 )
+                // ?. accede a la propiedad solo si no es null; ?: (Elvis) da el valor de respaldo "-".
                 Text(
                     text = device.data?.color?: "-",
                     style = Typography.bodyMedium
                 )
             }
         }
+        // Línea horizontal que separa un elemento del siguiente.
         HorizontalDivider()
     }   
 }
 
+// Vista previa con datos de prueba; los argumentos con nombre (id = 1) hacen la llamada más legible.
 @Preview(showBackground = true)
 @Composable
 fun DeviceItemPreview() {

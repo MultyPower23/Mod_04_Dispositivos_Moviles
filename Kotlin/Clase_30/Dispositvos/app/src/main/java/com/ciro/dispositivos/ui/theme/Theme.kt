@@ -11,6 +11,7 @@ import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalContext
 
+// Paletas de colores para modo oscuro y claro; private las deja visibles solo en este archivo.
 private val DarkColorScheme = darkColorScheme(
     primary = Purple80,
     secondary = PurpleGrey80,
@@ -22,7 +23,7 @@ private val LightColorScheme = lightColorScheme(
     secondary = PurpleGrey40,
     tertiary = Pink40
 
-    /* Other default colors to override
+    /* Otros colores que se pueden sobrescribir
     background = Color(0xFFFFFBFE),
     surface = Color(0xFFFFFBFE),
     onPrimary = Color.White,
@@ -33,15 +34,19 @@ private val LightColorScheme = lightColorScheme(
     */
 )
 
+// Tema de la app; content: @Composable () -> Unit recibe como parámetro la interfaz que va dentro.
+// Cuando el último parámetro es una función, se puede pasar con llaves después de la llamada: DispositivosTheme { ... }.
 @Composable
 fun DispositivosTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
-    // Dynamic color is available on Android 12+
+    // El color dinámico toma la paleta del fondo de pantalla; solo existe desde Android 12.
     dynamicColor: Boolean = true,
     content: @Composable () -> Unit
 ) {
+    // when es como un switch que devuelve un valor; se usa la primera condición que sea verdadera.
     val colorScheme = when {
         dynamicColor && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S -> {
+            // LocalContext.current obtiene el Context de Android dentro de un composable.
             val context = LocalContext.current
             if (darkTheme) dynamicDarkColorScheme(context) else dynamicLightColorScheme(context)
         }
@@ -50,6 +55,7 @@ fun DispositivosTheme(
         else -> LightColorScheme
     }
 
+    // MaterialTheme pone los colores y la tipografía a disposición de todos los composables hijos.
     MaterialTheme(
         colorScheme = colorScheme,
         typography = Typography,

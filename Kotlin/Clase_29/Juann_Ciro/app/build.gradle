@@ -1,17 +1,22 @@
+// Configuración de compilación del módulo app; Gradle la lee para construir el APK.
 plugins {
     alias(libs.plugins.android.application)
 }
 
 android {
     namespace 'com.ciro.juann_ciro'
+    // Versión del SDK con la que se compila el código.
     compileSdk {
         version = release(36)
     }
 
     defaultConfig {
+        // Identificador único de la app en el celular y en la Play Store.
         applicationId "com.ciro.juann_ciro"
+        // minSdk es la versión mínima de Android que puede instalar la app; targetSdk la versión para la que se probó.
         minSdk 28
         targetSdk 36
+        // versionCode es un número interno que sube en cada publicación; versionName es el texto visible.
         versionCode 1
         versionName "1.0"
 
@@ -30,12 +35,15 @@ android {
     }
 }
 
+// Librerías externas que usa la app; libs.* apunta al catálogo de versiones de Gradle.
 dependencies {
     implementation libs.appcompat
     implementation libs.material
     implementation libs.activity
     implementation libs.constraintlayout
+    // Lottie reproduce animaciones exportadas en formato JSON.
     implementation libs.lottie
+    // Dependencias que solo se usan en las pruebas.
     testImplementation libs.junit
     androidTestImplementation libs.ext.junit
     androidTestImplementation libs.espresso.core

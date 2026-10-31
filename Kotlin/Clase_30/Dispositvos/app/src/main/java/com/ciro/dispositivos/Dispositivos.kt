@@ -1,6 +1,10 @@
 package com.ciro.dispositivos
 
+// Modelo de un dispositivo; las propiedades se declaran directamente en el constructor.
+// data es de tipo Specs, así que un objeto puede contener a otro.
 data class Dispositivos(val id: Long, val name: String, val data: Specs)
+// JSON de ejemplo con la forma de los datos que el modelo representa.
+// "data": null y las claves distintas entre objetos muestran por qué las propiedades de Specs son nullables.
 /*
 [
   {

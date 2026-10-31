@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- LinearLayout acomoda sus hijos en fila; orientation="vertical" los pone uno debajo del otro. -->
+<!-- gravity="center" centra los hijos dentro del layout y background usa una imagen de res/drawable. -->
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -11,6 +13,8 @@
     android:gravity="center"
     tools:context=".Precarga">
 
+    <!-- dp es una unidad independiente de la densidad de pantalla; mide igual en cualquier celular. -->
+    <!-- @drawable/nombre apunta a un archivo de res/drawable sin su extensión. -->
     <ImageView
         android:layout_width="170dp"
         android:layout_height="174dp"

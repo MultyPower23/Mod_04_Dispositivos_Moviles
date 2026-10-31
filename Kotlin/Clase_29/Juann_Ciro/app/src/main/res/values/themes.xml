@@ -1,9 +1,11 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
+    <!-- Tema base de la app; hereda de Material 3 y DayNight cambia solo entre modo claro y oscuro. -->
+    <!-- NoActionBar quita la barra superior que Android pone por defecto. -->
     <style name="Base.Theme.Juann_Ciro" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
+        <!-- Aquí se sobrescriben colores del modo claro con etiquetas item. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
+    <!-- Tema que usa el manifiesto; se apoya en el tema base. -->
     <style name="Theme.Juann_Ciro" parent="Base.Theme.Juann_Ciro" />
 </resources>
