@@ -19,7 +19,9 @@ Mod_04_Dispositivos_Moviles/
 │   └── Clase_30/
 │       ├── Clase_30.md
 │       └── Dispositivos/
+├── .vscode/
 ├── .gitignore
+├── CLAUDE.md
 └── README.md
 ```
 
