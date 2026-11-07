@@ -8,6 +8,7 @@ Repo del Módulo 4 (Programación para Dispositivos Móviles) del Técnico en Pr
 Mod_04_Dispositivos_Moviles/
 ├── Kotlin/          Clase_27 en adelante, una carpeta por clase
 │   └── Clase_N/     Clase_N.md + proyectos de Android Studio de esa clase
+├── Juann_Ciro/      proyecto principal del módulo (Java), desde la Clase_29
 ├── .vscode/         settings.json, extensions.json
 ├── .gitignore
 ├── CLAUDE.md
@@ -17,7 +18,7 @@ Mod_04_Dispositivos_Moviles/
 - La numeración de clase es continua con `Tecnica` (no reinicia en el módulo).
 - El resumen `Clase_N.md` siempre va en su carpeta de clase, aunque la clase no haya dejado código.
 - Cada proyecto de Android Studio va en su propia subcarpeta dentro de la clase y se abre desde ella, no desde la raíz.
-- El trabajo grande del módulo va en este mismo repo.
+- El proyecto principal del módulo es `Juann_Ciro/`, en la raíz; los avances de cada clase sobre él se documentan en el `Clase_N.md` de esa clase.
 
 ## Conexión con `Tecnica`
 
