@@ -1,9 +1,11 @@
 // Configuración de compilación del módulo app; Gradle la lee para construir el APK.
 plugins {
+    // Aplica el plugin de Android para que este módulo se compile como una app.
     alias(libs.plugins.android.application)
 }
 
 android {
+    // Paquete con el que Android genera la clase R; coincide con el package de las clases Java.
     namespace 'com.ciro.juann_ciro'
     // Versión del SDK con la que se compila el código.
     compileSdk {
@@ -20,15 +22,20 @@ android {
         versionCode 1
         versionName "1.0"
 
+        // Clase que ejecuta las pruebas que corren en el celular o el emulador.
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    // Tipos de compilación; release es la versión que se publica.
     buildTypes {
         release {
+            // minifyEnabled en true reduciría y ofuscaría el código; en false el APK sale tal cual.
             minifyEnabled false
+            // Reglas de ProGuard, la herramienta que hace esa reducción cuando está activa.
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    // Versión de Java con la que se escribe y se compila el código.
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_11
         targetCompatibility JavaVersion.VERSION_11
@@ -37,14 +44,16 @@ android {
 
 // Librerías externas que usa la app; libs.* apunta al catálogo de versiones de Gradle.
 dependencies {
+    // implementation incluye la librería dentro de la app.
     implementation libs.appcompat
     implementation libs.material
     implementation libs.activity
     implementation libs.constraintlayout
     // Lottie reproduce animaciones exportadas en formato JSON.
     implementation libs.lottie
-    // Dependencias que solo se usan en las pruebas.
+    // testImplementation solo se usa en pruebas que corren en el computador.
     testImplementation libs.junit
+    // androidTestImplementation solo se usa en pruebas que corren en el celular o el emulador.
     androidTestImplementation libs.ext.junit
     androidTestImplementation libs.espresso.core
 }

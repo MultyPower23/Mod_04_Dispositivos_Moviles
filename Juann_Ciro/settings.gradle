@@ -1,5 +1,7 @@
+// Repositorios de donde Gradle descarga los plugins que usa para compilar.
 pluginManagement {
     repositories {
+        // Repositorio de Google; content limita lo que se busca ahí a los paquetes de Android, Google y AndroidX.
         google {
             content {
                 includeGroupByRegex("com\\.android.*")
@@ -7,11 +9,14 @@ pluginManagement {
                 includeGroupByRegex("androidx.*")
             }
         }
+        // Maven Central es el repositorio público general de librerías Java, como Lottie.
         mavenCentral()
         gradlePluginPortal()
     }
 }
+// Repositorios de donde se descargan las librerías de la app.
 dependencyResolutionManagement {
+    // FAIL_ON_PROJECT_REPOS obliga a declarar los repositorios solo aquí y no en cada módulo.
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
         google()
@@ -19,5 +24,7 @@ dependencyResolutionManagement {
     }
 }
 
+// Nombre del proyecto en Android Studio.
 rootProject.name = "Juann_Ciro"
+// Módulos que forman el proyecto; app es el único y contiene la aplicación.
 include ':app'

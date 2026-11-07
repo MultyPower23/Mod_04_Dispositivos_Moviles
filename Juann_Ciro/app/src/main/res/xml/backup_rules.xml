@@ -1,11 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?><!--
-   Sample backup rules file; uncomment and customize as necessary.
-   See https://developer.android.com/guide/topics/data/autobackup
-   for details.
-   Note: This file is ignored for devices older than API 31
-   See https://developer.android.com/about/versions/12/backup-restore
--->
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Reglas del respaldo automático en la nube para celulares con Android 11 o anterior. -->
+<!-- Por defecto se respaldan todos los datos de la app; include y exclude permiten elegir cuáles. -->
 <full-backup-content>
+    <!-- sharedpref son los datos pequeños que guarda la app, como preferencias del usuario. -->
     <!--
    <include domain="sharedpref" path="."/>
    <exclude domain="sharedpref" path="device.xml"/>
