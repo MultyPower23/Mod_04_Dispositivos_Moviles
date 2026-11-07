@@ -1,11 +1,17 @@
 {
   "recommendations": [
+    "zhuangtongfa.material-theme",
     "pkief.material-icon-theme",
+    "anthropic.claude-code",
+    "ms-ceintl.vscode-language-pack-es",
     "mathiasfrohlich.kotlin",
+    "redhat.vscode-xml",
+    "formulahendry.auto-rename-tag",
     "bierner.markdown-preview-github-styles",
     "bierner.github-markdown-preview",
-    "bierner.markdown-checkboxes",
+    "bierner.markdown-checkbox",
     "bierner.markdown-emoji",
+    "bierner.markdown-footnotes",
     "DavidAnson.vscode-markdownlint",
     "eamodio.gitlens",
     "mhutchie.git-graph",
