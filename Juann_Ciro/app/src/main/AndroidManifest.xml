@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- El manifiesto le describe la app a Android: nombre, ícono, tema y pantallas que existen. -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <!-- Configuración general de la app; los valores con @ vienen de la carpeta res/. -->
-    <!-- allowBackup y las reglas de respaldo deciden qué datos de la app se copian a la nube de Google. -->
-    <!-- label es el nombre bajo el ícono y supportsRtl adapta la interfaz a idiomas que se leen de derecha a izquierda. -->
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -15,18 +11,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Juann_Ciro">
+        <activity
+            android:name=".PaginaWeb"
+            android:exported="false" />
         <!-- MAIN y LAUNCHER hacen que Precarga sea la primera pantalla al tocar el ícono. -->
         <!-- exported="true" permite que el sistema abra esta pantalla desde fuera de la app, como el menú del celular. -->
         <activity
             android:name=".Precarga"
             android:exported="true">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
-        </activity>
+                <action android:name="android.intent.action.MAIN" />
 
-        <!-- Con este segundo intent-filter LAUNCHER, el celular muestra dos íconos de la app. -->
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- Con este segundo intent-filter LAUNCHER, el celular muestra dos íconos de la app. -->
         <activity
             android:name=".MainActivity"
             android:exported="true">
