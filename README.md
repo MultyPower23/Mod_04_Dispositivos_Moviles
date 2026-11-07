@@ -15,9 +15,11 @@ Mod_04_Dispositivos_Moviles/
 │   │   └── Proyecto_Prueba/
 │   ├── Clase_29/
 │   │   └── Clase_29.md
-│   └── Clase_30/
-│       ├── Clase_30.md
-│       └── Dispositivos/
+│   ├── Clase_30/
+│   │   ├── Clase_30.md
+│   │   └── Dispositivos/
+│   └── Clase_31/
+│       └── Clase_31.md
 ├── Juann_Ciro/
 ├── .vscode/
 ├── .gitignore
