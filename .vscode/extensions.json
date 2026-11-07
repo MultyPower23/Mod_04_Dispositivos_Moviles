@@ -1,0 +1,14 @@
+{
+  "recommendations": [
+    "pkief.material-icon-theme",
+    "mathiasfrohlich.kotlin",
+    "bierner.markdown-preview-github-styles",
+    "bierner.github-markdown-preview",
+    "bierner.markdown-checkboxes",
+    "bierner.markdown-emoji",
+    "DavidAnson.vscode-markdownlint",
+    "eamodio.gitlens",
+    "mhutchie.git-graph",
+    "christian-kohler.path-intellisense"
+  ]
+}
