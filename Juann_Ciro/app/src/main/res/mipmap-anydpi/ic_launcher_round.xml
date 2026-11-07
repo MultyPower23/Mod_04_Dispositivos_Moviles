@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Ícono adaptativo: el celular lo recorta con la forma que use su tema (círculo, cuadrado, gota). -->
 <adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- background es la capa de fondo y foreground el dibujo que va encima. -->
     <background android:drawable="@drawable/ic_launcher_background" />
     <foreground android:drawable="@drawable/ic_launcher_foreground" />
+    <!-- monochrome es la versión de un solo color para los íconos temáticos de Android 13. -->
     <monochrome android:drawable="@drawable/ic_launcher_foreground" />
 </adaptive-icon>

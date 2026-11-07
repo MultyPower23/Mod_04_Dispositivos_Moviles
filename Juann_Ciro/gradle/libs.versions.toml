@@ -1,3 +1,5 @@
+# Catálogo de versiones: cada librería se declara una vez aquí y Gradle la usa como libs.nombre.
+# versions guarda los números de versión; cambiar uno actualiza la librería en todo el proyecto.
 [versions]
 agp = "8.13.2"
 junit = "4.13.2"
@@ -9,16 +11,24 @@ material = "1.14.0"
 activity = "1.13.0"
 constraintlayout = "2.2.2"
 
+# libraries une el grupo y el nombre de cada librería con su versión a través de version.ref.
 [libraries]
+# JUnit es el framework de pruebas de Java; ext-junit lo adapta para correr pruebas en Android.
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+# Espresso automatiza pruebas de la interfaz, como tocar botones o escribir en campos.
 espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+# AppCompat da AppCompatActivity y hace que la app se vea igual en versiones viejas y nuevas de Android.
 appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+# Lottie reproduce animaciones guardadas en JSON.
 lottie = { module = "com.airbnb.android:lottie", version.ref = "lottie" }
+# Material trae los componentes de Material Design, como TextInputLayout y los botones.
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+# Activity trae EdgeToEdge y otras utilidades para las pantallas.
 activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+# ConstraintLayout es el layout que trae la plantilla de Android Studio por defecto.
 constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
 
+# plugins declara los plugins de Gradle; agp es el Android Gradle Plugin, el que sabe compilar apps Android.
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
-
