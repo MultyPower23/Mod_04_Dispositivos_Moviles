@@ -33,7 +33,17 @@ public class PaginaWeb extends AppCompatActivity {
         webSettings.setJavaScriptEnabled(true);
         webSettings.setDomStorageEnabled(true);
 
-        wvPagina.loadUrl("https://www.reddit.com/r/youtube/comments/1h8cpb3/how_to_download_videos_from_any_webpage_on/?tl=es-419");
+        wvPagina.loadUrl("https://github.com/MultyPower23/Tecnica");
         wvPagina.setWebViewClient(new WebViewClient());
+    }
+
+    @SuppressLint("GestureBackNavigation")
+    @Override
+    public void onBackPressed() {
+        if (wvPagina.canGoBack()) {
+            wvPagina.goBack();
+        } else {
+            super.onBackPressed();
+        }
     }
 }
