@@ -1,3 +1,4 @@
+<!-- Dibujo del ícono por defecto de Android; aapt:attr permite definir el degradado dentro del mismo archivo. -->
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:aapt="http://schemas.android.com/aapt"
     android:width="108dp"

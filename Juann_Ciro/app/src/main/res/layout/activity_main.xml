@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- RelativeLayout ubica cada vista respecto al padre o a otra vista por su id. -->
 <!-- background pone una imagen de fondo que cubre toda la pantalla. -->
+<!-- xmlns declara los prefijos: android para atributos del sistema, app para los de librerías y tools para el editor. -->
+<!-- Los atributos tools, como tools:context, solo sirven para la vista previa y no llegan al celular. -->
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -11,6 +13,7 @@
     android:background="@drawable/fondo_principal"
     tools:context=".MainActivity">
 
+    <!-- @+id crea un id nuevo; @id sin el + usa uno que ya existe. -->
     <!-- centerHorizontal centra la vista en horizontal dentro del padre. -->
     <!-- contentDescription es el texto que leen los lectores de pantalla para describir la imagen. -->
     <ImageView
@@ -47,6 +50,7 @@
         android:layout_below="@id/tvTitulo"
         android:layout_marginTop="10dp">
 
+        <!-- match_parent ocupa todo el ancho del padre y wrap_content solo lo que necesita el contenido. -->
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -81,6 +85,7 @@
                 android:layout_marginTop="15dp"
                 app:passwordToggleEnabled="true">
 
+                <!-- textPassword oculta lo que se escribe con puntos. -->
                 <EditText
                     android:id="@+id/etClave"
                     android:layout_width="match_parent"
@@ -91,6 +96,7 @@
 
             </com.google.android.material.textfield.TextInputLayout>
 
+            <!-- alignParentEnd pega el texto al borde derecho del formulario. -->
             <TextView
                 android:id="@+id/tvOlvidaste"
                 android:layout_width="wrap_content"
@@ -103,6 +109,7 @@
                 android:layout_marginTop="15dp"
                 />
 
+            <!-- backgroundTint cambia el color de fondo del botón sin perder su forma ni su efecto al tocarlo. -->
             <Button
                 android:id="@+id/btnIngresar"
                 android:layout_width="match_parent"
@@ -123,6 +130,7 @@
                 android:backgroundTint="@color/azul_cielo"
                 />
 
+            <!-- textStyle="bold" pone el texto en negrita. -->
             <TextView
                 android:id="@+id/tvRegistrate"
                 android:layout_width="wrap_content"
