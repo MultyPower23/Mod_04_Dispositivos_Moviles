@@ -80,5 +80,12 @@
     "Clase_29.md": "changelog",
     "Clase_30.md": "changelog",
     "Clase_31.md": "changelog"
+  },
+
+  "material-icon-theme.folders.associations": {
+    "Juann_Ciro": "project",
+    "Prueba1": "test",
+    "Proyecto_Prueba": "temp",
+    "Dispositivos": "mobile"
   }
 }
